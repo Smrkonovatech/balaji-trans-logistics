@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+Disallow: /air-freight.html
+Disallow: /ocean-freight.html
+Disallow: /rail-freight.html
+Disallow: /logistics.html
+Disallow: /warehousing.html
+Disallow: /single-service.html
+Disallow: /case-studies-2.html
+Disallow: /index-3.html
+
+Sitemap: sitemap.xml
