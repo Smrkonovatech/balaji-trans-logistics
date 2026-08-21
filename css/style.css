@@ -9901,3 +9901,250 @@ ul.check li:before {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* Custom Location Row Styles */
+.loc-card-container {
+    height: 146px;
+    overflow: hidden;
+}
+
+.loc-card-primary {
+    width: 193px;
+    clip-path: polygon(30px 0, 100% 0, calc(100% - 30px) 100%, 0 100%);
+}
+
+.loc-card-num {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.loc-image-wrap {
+    margin-left: -30px;
+}
+
+.loc-image-overlay {
+    background: rgba(0,0,0,0.4);
+}
+
+.loc-title-wrap {
+    left: 60px;
+}
+
+.loc-title {
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+/* Margin-left modifiers for continuous slanted edge */
+.loc-card-shift-1 { margin-left: 120px; }
+.loc-card-shift-2 { margin-left: 90px; }
+.loc-card-shift-3 { margin-left: 60px; }
+.loc-card-shift-4 { margin-left: 30px; }
+.loc-card-shift-5 { margin-left: 0px; }
+
+
+/* Mobile adjustments for Hero Banner */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
+    }
+    .hero-desc {
+        font-size: 16px !important;
+        line-height: 1.5;
+    }
+    .hero-slant-wrapper {
+        width: 100% !important;
+    }
+}
+
+
+/* Mobile adjustments for Location Cards */
+@media (max-width: 767px) {
+    .loc-card-container {
+        height: 90px;
+    }
+    .loc-card-primary {
+        width: 100px;
+        clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+    }
+    .loc-card-num {
+        font-size: 2rem;
+    }
+    .loc-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    .loc-title-wrap {
+        left: 20px;
+    }
+    .loc-image-wrap {
+        margin-left: -15px;
+    }
+    
+    /* Adjusted margin steps to match the 15px slant */
+    .loc-card-shift-1 { margin-left: 60px; }
+    .loc-card-shift-2 { margin-left: 45px; }
+    .loc-card-shift-3 { margin-left: 30px; }
+    .loc-card-shift-4 { margin-left: 15px; }
+    .loc-card-shift-5 { margin-left: 0px; }
+}
+
+
+.locations-sec-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-style: italic;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+
+/* Mobile adjustments for Stat Entries (Reliable Transportation etc) */
+@media (max-width: 767px) {
+    .stat-sec3 .stat-entries .s-item {
+        flex: 0 0 100%;
+        text-align: left !important;
+        margin-bottom: 30px;
+    }
+    .stat-sec3 .stat-entries .s-item:last-child {
+        margin-bottom: 0;
+        text-align: left !important;
+    }
+    .stat-sec3 .stat-entries .s-item h3 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+    }
+    .stat-sec3 .stat-entries {
+        padding: 40px 30px !important;
+    }
+}
+
+
+/* Mobile adjustments for Solution Cards (Engineering / Construction) */
+@media (max-width: 767px) {
+    .solution-wrap .solution-card {
+        width: 100% !important;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: 100% 100% !important; /* Stretch background to fit content height */
+        padding: 25px 40px 25px 25px !important;
+        min-height: 140px;
+    }
+    .solution-wrap .solution-card h3 {
+        font-size: 22px !important;
+        margin-bottom: 5px !important;
+    }
+    .solution-wrap .solution-card p {
+        font-size: 14px !important;
+        line-height: 1.4;
+        margin-bottom: 0;
+    }
+}
+
+
+/* CTA Section Custom Styles */
+.cta-title {
+    font-size: clamp(2rem, 10vw, 56px) !important;
+    font-style: italic;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.cta-form {
+    max-width: 700px;
+    height: 55px;
+}
+
+.cta-input {
+    border: 2px solid var(--primary);
+    border-right: none;
+    padding: 12px 25px;
+    font-style: italic;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #999;
+}
+
+.cta-btn {
+    font-style: italic;
+    font-size: 18px;
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, 0% 100%);
+    padding: 0 45px;
+    border: none;
+    margin-left: -20px;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/* Mobile adjustments for CTA Section */
+@media (max-width: 767px) {
+    .cta-form {
+        height: 50px;
+    }
+    .cta-input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .cta-btn {
+        padding: 0 20px;
+        font-size: 14px;
+        clip-path: polygon(15px 0, 100% 0, 100% 100%, 0% 100%);
+        margin-left: -15px;
+    }
+}
+
+
+/* Fix mobile CTA button cutoff */
+@media (max-width: 767px) {
+    .cta-input {
+        min-width: 0 !important; /* Allow input to shrink in flex container */
+        padding: 10px !important;
+    }
+    .cta-btn {
+        padding: 0 15px 0 20px !important;
+        font-size: 13px !important;
+    }
+}
+
+
+/* Stack CTA form vertically on small mobile screens to prevent text cutoff */
+@media (max-width: 575px) {
+    .cta-form {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    .cta-input {
+        border-right: 2px solid var(--primary) !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    .cta-btn {
+        width: 100% !important;
+        margin-left: 0 !important;
+        clip-path: none !important;
+        padding: 12px 20px !important;
+    }
+}
+
+
+/* Reduce margin bottom on footer widgets on mobile to fix large gap */
+@media (max-width: 767px) {
+    .footer-widget {
+        margin-bottom: 25px !important;
+    }
+}
+
+
+/* Fix mobile FAQ accordion text overlap */
+@media (max-width: 767px) {
+    .faq-accordion .accordion-item .accordion-button {
+        padding-right: 50px !important;
+        font-size: 17px !important;
+    }
+    .faq-accordion .accordion-item .accordion-button:after {
+        right: 15px !important;
+    }
+}
+

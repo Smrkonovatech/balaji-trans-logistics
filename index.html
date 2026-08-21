@@ -95,19 +95,7 @@
    </div>
    <!-- Canvas Menu End -->
 
-   <div class="search-popup offcanvas offcanvas-top" id="offcanvas-search" data-bs-scroll="true">
-      <div class="container d-flex flex-row py-5 align-items-center position-relative">
-         <button type="button" class="btn-close bg-primary rounded-5" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-         <div class="col-lg-9 mx-auto">
-            <form class="search-form w-100 mb-5">
-               <input id="search-form" type="text" class="form-control shadow-1"
-                  placeholder="Type keyword and hit enter">
-            </form>
 
-         </div>
-      </div>
-   </div>
    <!-- Header Start -->
    <header class="header header-3">
       <div class="sticky-height"></div>
@@ -193,9 +181,6 @@
                   <div class="nav-cta d-none d-md-flex order-lg-3">
                      <div class="d-flex align-items-center justify-content-between gap-4">
 
-                        <a href="#" class="icon-lg bg-light rounded-circle" data-bs-toggle="offcanvas"
-                           data-bs-target="#offcanvas-search"><i class="fa fa-search"></i></a>
-
                         <a href="contact.html" class="btn btn-primary btn-hover"> Get a Quote <i
                               class="fa fa-arrow-right"></i>
                            <span></span>
@@ -267,6 +252,10 @@
       <!-- Normal img tag for the background -->
       <img src="images/home/banner.png" alt="Balaji Trans Logistics"
          class="hero-banner-img position-absolute h-100 top-0 start-0">
+
+      <!-- Mobile-only dark overlay for text readability -->
+      <div class="d-block d-md-none position-absolute w-100 h-100 top-0 start-0"
+         style="background: rgba(0,0,0,0.5); z-index: 0;"></div>
 
       <!-- Wrapper for drop-shadow since it works better on a parent than directly on clip-path in some browsers -->
       <div class="hero-slant-wrapper position-absolute top-0 end-0 w-100 h-100">
@@ -448,7 +437,7 @@
                </div>
                <div class="swiper-slide">
                   <div class="service-entry bg-cover round"
-                     style="background-image: url('iimages/home/service/9.webp');">
+                     style="background-image: url('images/home/service/9.webp');">
                      <div class="serv-txt rounded-4">
                         <div class="serv-heading">
                            <span class="serv-icon"><img src="images/sv2.png" alt=""></span>
@@ -896,8 +885,7 @@
 
                <div class="p-5 d-flex flex-column justify-content-center position-relative z-1 w-100"
                   style="padding-left: 12% !important; padding-right: 12% !important;">
-                  <h2 class="text-white text-uppercase fw-bold mb-4"
-                     style="font-size: 3.5rem; font-style: italic; font-family: 'DM Sans', sans-serif; line-height: 1.1; letter-spacing: 1px;">
+                  <h2 class="text-white text-uppercase fw-bold mb-4 locations-sec-title">
                      LOGISTIC<br>
                      SERVICES ACROSS<br>
                      <span class="text-primary">BENGALURU'S</span><br>
@@ -913,94 +901,84 @@
             </div>
 
             <!-- Right Side -->
-            <div class="col-lg-7 bg-dark d-flex flex-column" style="gap: 4px;">
+            <div class="col-lg-7 d-flex flex-column" style="gap: 4px;background-color: #1a1a1a;">
 
                <!-- Row 1 -->
-               <div class="d-flex position-relative" style="height: 20vh; min-height: 130px; overflow: hidden;">
-                  <div class="bg-primary d-flex align-items-center justify-content-center position-relative z-2"
-                     style="width: 130px; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);">
-                     <span class="text-white fw-bold"
-                        style="font-size: 3rem; font-style: italic; transform: translateX(-10px);">1</span>
+               <div class="d-flex position-relative loc-card-container">
+                  <div
+                     class="bg-primary d-flex align-items-center justify-content-center position-relative z-2 loc-card-primary loc-card-shift-1">
+                     <span class="text-white fw-bold loc-card-num">1</span>
                   </div>
-                  <div class="flex-grow-1 position-relative z-1"
-                     style="background: url('images/home/location/peenya.png') center/cover no-repeat; margin-left: -30px;">
-                     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);">
+                  <div class="flex-grow-1 position-relative z-1 loc-image-wrap"
+                     style="background: url('images/home/location/peenya.png') center/cover no-repeat;">
+                     <div class="position-absolute top-0 start-0 w-100 h-100 loc-image-overlay">
                      </div>
-                     <div class="position-absolute top-50 translate-middle-y" style="left: 60px;">
-                        <h3 class="text-white text-uppercase fw-bold m-0"
-                           style="font-size: 3rem; font-style: italic; letter-spacing: 1.5px;">PEENYA</h3>
+                     <div class="position-absolute top-50 translate-middle-y loc-title-wrap">
+                        <h3 class="text-white text-uppercase fw-bold m-0 loc-title">PEENYA</h3>
                      </div>
                   </div>
                </div>
 
                <!-- Row 2 -->
-               <div class="d-flex position-relative" style="height: 20vh; min-height: 130px; overflow: hidden;">
-                  <div class="bg-primary d-flex align-items-center justify-content-center position-relative z-2"
-                     style="width: 160px; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);">
-                     <span class="text-white fw-bold"
-                        style="font-size: 3rem; font-style: italic; transform: translateX(-10px);">2</span>
+               <div class="d-flex position-relative loc-card-container">
+                  <div
+                     class="bg-primary d-flex align-items-center justify-content-center position-relative z-2 loc-card-primary loc-card-shift-2">
+                     <span class="text-white fw-bold loc-card-num">2</span>
                   </div>
-                  <div class="flex-grow-1 position-relative z-1"
-                     style="background: url('images/home/location/bommasandra.png') center/cover no-repeat; margin-left: -30px;">
-                     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);">
+                  <div class="flex-grow-1 position-relative z-1 loc-image-wrap"
+                     style="background: url('images/home/location/bommasandra.png') center/cover no-repeat;">
+                     <div class="position-absolute top-0 start-0 w-100 h-100 loc-image-overlay">
                      </div>
-                     <div class="position-absolute top-50 translate-middle-y" style="left: 60px;">
-                        <h3 class="text-white text-uppercase fw-bold m-0"
-                           style="font-size: 3rem; font-style: italic; letter-spacing: 1.5px;">BOMMASANDRA</h3>
+                     <div class="position-absolute top-50 translate-middle-y loc-title-wrap">
+                        <h3 class="text-white text-uppercase fw-bold m-0 loc-title">BOMMASANDRA</h3>
                      </div>
                   </div>
                </div>
 
                <!-- Row 3 -->
-               <div class="d-flex position-relative" style="height: 20vh; min-height: 130px; overflow: hidden;">
-                  <div class="bg-primary d-flex align-items-center justify-content-center position-relative z-2"
-                     style="width: 190px; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);">
-                     <span class="text-white fw-bold"
-                        style="font-size: 3rem; font-style: italic; transform: translateX(-10px);">3</span>
+               <div class="d-flex position-relative loc-card-container">
+                  <div
+                     class="bg-primary d-flex align-items-center justify-content-center position-relative z-2 loc-card-primary loc-card-shift-3">
+                     <span class="text-white fw-bold loc-card-num">3</span>
                   </div>
-                  <div class="flex-grow-1 position-relative z-1"
-                     style="background: url('images/home/location/jigani.png') center/cover no-repeat; margin-left: -30px;">
-                     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);">
+                  <div class="flex-grow-1 position-relative z-1 loc-image-wrap"
+                     style="background: url('images/home/location/jigani.png') center/cover no-repeat;">
+                     <div class="position-absolute top-0 start-0 w-100 h-100 loc-image-overlay">
                      </div>
-                     <div class="position-absolute top-50 translate-middle-y" style="left: 60px;">
-                        <h3 class="text-white text-uppercase fw-bold m-0"
-                           style="font-size: 3rem; font-style: italic; letter-spacing: 1.5px;">JIGANI</h3>
+                     <div class="position-absolute top-50 translate-middle-y loc-title-wrap">
+                        <h3 class="text-white text-uppercase fw-bold m-0 loc-title">JIGANI</h3>
                      </div>
                   </div>
                </div>
 
                <!-- Row 4 -->
-               <div class="d-flex position-relative" style="height: 20vh; min-height: 130px; overflow: hidden;">
-                  <div class="bg-primary d-flex align-items-center justify-content-center position-relative z-2"
-                     style="width: 220px; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);">
-                     <span class="text-white fw-bold"
-                        style="font-size: 3rem; font-style: italic; transform: translateX(-10px);">4</span>
+               <div class="d-flex position-relative loc-card-container">
+                  <div
+                     class="bg-primary d-flex align-items-center justify-content-center position-relative z-2 loc-card-primary loc-card-shift-4">
+                     <span class="text-white fw-bold loc-card-num">4</span>
                   </div>
-                  <div class="flex-grow-1 position-relative z-1"
-                     style="background: url('images/home/location/dabaspet.png') center/cover no-repeat; margin-left: -30px;">
-                     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);">
+                  <div class="flex-grow-1 position-relative z-1 loc-image-wrap"
+                     style="background: url('images/home/location/dabaspet.png') center/cover no-repeat;">
+                     <div class="position-absolute top-0 start-0 w-100 h-100 loc-image-overlay">
                      </div>
-                     <div class="position-absolute top-50 translate-middle-y" style="left: 60px;">
-                        <h3 class="text-white text-uppercase fw-bold m-0"
-                           style="font-size: 3rem; font-style: italic; letter-spacing: 1.5px;">DABASPET</h3>
+                     <div class="position-absolute top-50 translate-middle-y loc-title-wrap">
+                        <h3 class="text-white text-uppercase fw-bold m-0 loc-title">DABASPET</h3>
                      </div>
                   </div>
                </div>
 
                <!-- Row 5 -->
-               <div class="d-flex position-relative" style="height: 20vh; min-height: 130px; overflow: hidden;">
-                  <div class="bg-primary d-flex align-items-center justify-content-center position-relative z-2"
-                     style="width: 250px; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 100%, 0 100%);">
-                     <span class="text-white fw-bold"
-                        style="font-size: 3rem; font-style: italic; transform: translateX(-10px);">5</span>
+               <div class="d-flex position-relative loc-card-container">
+                  <div
+                     class="bg-primary d-flex align-items-center justify-content-center position-relative z-2 loc-card-primary loc-card-shift-5">
+                     <span class="text-white fw-bold loc-card-num">5</span>
                   </div>
-                  <div class="flex-grow-1 position-relative z-1"
-                     style="background: url('images/home/location/devanhalli.png') center/cover no-repeat; margin-left: -30px;">
-                     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);">
+                  <div class="flex-grow-1 position-relative z-1 loc-image-wrap"
+                     style="background: url('images/home/location/devanhalli.png') center/cover no-repeat;">
+                     <div class="position-absolute top-0 start-0 w-100 h-100 loc-image-overlay">
                      </div>
-                     <div class="position-absolute top-50 translate-middle-y" style="left: 60px;">
-                        <h3 class="text-white text-uppercase fw-bold m-0"
-                           style="font-size: 3rem; font-style: italic; letter-spacing: 1.5px;">DEVANAHALLI</h3>
+                     <div class="position-absolute top-50 translate-middle-y loc-title-wrap">
+                        <h3 class="text-white text-uppercase fw-bold m-0 loc-title">DEVANAHALLI</h3>
                      </div>
                   </div>
                </div>
@@ -1347,18 +1325,15 @@
    <footer class="footer new-footer">
       <div class="footer-top-section bg-white py-5">
          <div class="container text-center py-5">
-            <h2 class="text-primary fw-bold mb-5 text-uppercase"
-               style="font-style: italic; font-family: 'DM Sans', sans-serif; font-size: 56px; line-height: 1.1; letter-spacing: 1px;">
+            <h2 class="text-primary fw-bold mb-5 text-uppercase cta-title">
                MOVE YOUR CARGO<br>WITH CONFIDENCE</h2>
             <div class="row justify-content-center">
                <div class="col-lg-8">
-                  <form action="contact.html" class="d-flex align-items-stretch justify-content-center mx-auto"
-                     style="max-width: 700px; height: 55px;">
-                     <input type="email" name="email" class="form-control rounded-0 shadow-none"
-                        placeholder="Your email ID" aria-label="Email"
-                        style="border: 2px solid var(--primary); border-right: none; padding: 12px 25px; font-style: italic; flex-grow: 1; font-size: 16px; color: #999;">
-                     <button class="btn btn-primary rounded-0 text-white fw-bold" type="submit"
-                        style="font-style: italic; font-size: 18px; clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); padding: 0 45px; border: none; margin-left: -20px; z-index: 1; white-space: nowrap;">GET
+                  <form action="contact.html"
+                     class="d-flex align-items-stretch justify-content-center mx-auto cta-form">
+                     <input type="email" name="email" class="form-control rounded-0 shadow-none cta-input"
+                        placeholder="Your email ID" aria-label="Email">
+                     <button class="btn btn-primary rounded-0 text-white fw-bold cta-btn" type="submit">GET
                         A QUOTE</button>
                   </form>
                </div>
@@ -1378,15 +1353,15 @@
                         <li><a href="index.html" class="text-white text-decoration-none"
                               style="font-size: 15px; font-style: italic;">Home</a></li>
                         <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
+                              style="font-size: 15px; font-style: italic;">About Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Contact Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Terms of Service</a></li>
                      </ul>
                   </div>
                </div>
@@ -1396,18 +1371,18 @@
                         style="font-style: italic; font-weight: 800; font-size: 28px; letter-spacing: 0.5px;">LOCATIONS
                      </h3>
                      <ul class="list-unstyled" style="line-height: 2.2;">
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
+                        <li><a href="locations/logistics-company-peenya.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Peenya</a></li>
+                        <li><a href="locations/logistics-company-bommasandra.html"
+                              class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Bommasandra</a></li>
+                        <li><a href="locations/logistics-company-jigani.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Jigani</a></li>
+                        <li><a href="locations/logistics-company-dabaspet.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Dabaspet</a></li>
+                        <li><a href="locations/logistics-company-devanahalli.html"
+                              class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Devanahalli</a></li>
                      </ul>
                   </div>
                </div>
@@ -1417,18 +1392,18 @@
                         style="font-style: italic; font-weight: 800; font-size: 28px; letter-spacing: 0.5px;">SERVICES
                      </h3>
                      <ul class="list-unstyled" style="line-height: 2.2;">
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
-                        <li><a href="index.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">Home</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none"
-                              style="font-size: 15px; font-style: italic;">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Full Truck Load Transport</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Part Load Transport</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Trailer Transportation</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Container Transportation</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Car Transportation</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"
+                              style="font-size: 15px; font-style: italic;">Heavy Machinery Transportation</a></li>
                      </ul>
                   </div>
                </div>
@@ -1437,9 +1412,27 @@
          <img src="images/home/footer-logo.png" class="position-absolute bottom-0 end-0 z-0" alt="BTL Logo"
             style="height: 100%; max-height: 350px; width: auto; max-width: 55%; object-fit: contain; object-position: right bottom; opacity: 0.2; transform: translateX(5%); pointer-events: none;">
          <div class="container position-relative z-1 pt-5 mt-5">
-            <p class="text-white mb-0" style="font-size: 13px; font-style: italic; opacity: 0.85;">Copyright &copy; 2026
-               <a href="index.html" class="text-white text-decoration-underline">Balaji Trans Logistics</a>.
-               Proprietorship of Pramila Sharma.</p>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+               <p class="text-white mb-3 mb-md-0" style="font-size: 13px; font-style: italic; opacity: 0.85;">Copyright
+                  &copy; 2026
+                  <a href="https://balajitranslogistics.com/" class="text-white text-decoration-underline"
+                     target="_blank" rel="noopener noreferrer">Balaji Trans Logistics</a>. Proprietorship of Pramila
+                  Sharma. <br>
+                  Designed and developed by <a href="https://www.smrkonova.com/"
+                     class="text-white text-decoration-underline" target="_blank"
+                     rel="noopener noreferrer">Smrkonova</a>.
+               </p>
+               <div class="social-links d-flex gap-3">
+                  <a href="#" class="text-white opacity-75 text-decoration-none" aria-label="Facebook"><i
+                        class="fab fa-facebook-f fa-lg"></i></a>
+                  <a href="#" class="text-white opacity-75 text-decoration-none" aria-label="Twitter"><i
+                        class="fab fa-twitter fa-lg"></i></a>
+                  <a href="#" class="text-white opacity-75 text-decoration-none" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in fa-lg"></i></a>
+                  <a href="#" class="text-white opacity-75 text-decoration-none" aria-label="Instagram"><i
+                        class="fab fa-instagram fa-lg"></i></a>
+               </div>
+            </div>
          </div>
       </div>
    </footer>
