@@ -5732,7 +5732,25 @@ section.promo-sec .breadcrumb-item+.breadcrumb-item:before {
 	text-align: center;
 	border-right: 1px solid var(--theme-border);
 	border-bottom: 1px solid var(--theme-border);
-	padding: 60px 0
+	padding: 40px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.brands-sec3 .partner-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 70px
+}
+
+.brands-sec3 .partner-logo img {
+	max-width: 140px;
+	max-height: 64px;
+	width: auto;
+	height: auto;
+	object-fit: contain
 }
 
 /*! Stat */
