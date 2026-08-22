@@ -4802,7 +4802,19 @@ section.promo-sec .breadcrumb-item+.breadcrumb-item:before {
 
 @media (max-width:575.98px) {
 	.about-sec3 .about-media3 .ab-sm-ft {
-		margin-left: 0
+		margin-left: 0;
+		margin-top: 20px;
+		flex-direction: column;
+	}
+
+	.about-sec3 .about-media3 .ab-stat2 {
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
+		text-align: center;
+		margin: 30px auto 0;
+		display: block;
 	}
 }
 
@@ -10002,8 +10014,15 @@ ul.check li:before {
 }
 
 .hero-banner-img {
-	width: 100%;
+	width: 60%;
 	object-fit: cover;
+	object-position: left center;
+}
+
+@media (max-width: 991px) {
+	.hero-banner-img {
+		width: 100%;
+	}
 }
 /* Mobile adjustments for Hero Banner */
 @media (max-width: 767px) {
