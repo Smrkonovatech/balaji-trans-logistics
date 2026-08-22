@@ -10001,20 +10001,41 @@ ul.check li:before {
 	margin-left: 0px;
 }
 
-
+.hero-banner-img {
+	width: 100%;
+	object-fit: cover;
+}
 /* Mobile adjustments for Hero Banner */
 @media (max-width: 767px) {
+	.hero-content {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.hero-title {
 		font-size: clamp(2rem, 8vw, 3rem) !important;
+		text-align: center;
 	}
 
 	.hero-desc {
 		font-size: 16px !important;
-		line-height: 1.5;
+		text-align: center;
+	}
+
+	.hero-content .d-flex.flex-wrap {
+		justify-content: center !important;
+		flex-direction: column;
+		gap: 20px !important;
+	}
+
+	.hero-content .ms-4 {
+		margin-left: 0 !important;
 	}
 
 	.hero-slant-wrapper {
-		width: 100% !important;
+		display: none !important;
 	}
 }
 
@@ -10027,7 +10048,7 @@ ul.check li:before {
 
 	.loc-card-primary {
 		width: 100px;
-		clip-path: polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%);
+		clip-path: none !important;
 	}
 
 	.loc-card-num {
@@ -10044,28 +10065,17 @@ ul.check li:before {
 	}
 
 	.loc-image-wrap {
-		margin-left: -15px;
+		margin-left: 0 !important;
+		clip-path: none !important;
 	}
 
-	/* Adjusted margin steps to match the 15px slant */
-	.loc-card-shift-1 {
-		margin-left: 60px;
-	}
-
-	.loc-card-shift-2 {
-		margin-left: 45px;
-	}
-
-	.loc-card-shift-3 {
-		margin-left: 30px;
-	}
-
-	.loc-card-shift-4 {
-		margin-left: 15px;
-	}
-
+	/* Remove margin steps since slant is gone */
+	.loc-card-shift-1,
+	.loc-card-shift-2,
+	.loc-card-shift-3,
+	.loc-card-shift-4,
 	.loc-card-shift-5 {
-		margin-left: 0px;
+		margin-left: 0 !important;
 	}
 }
 
@@ -10102,6 +10112,61 @@ ul.check li:before {
 		padding: 40px 30px !important;
 	}
 }
+
+/* Mobile Centering Adjustments */
+@media (max-width: 767px) {
+
+	.about-content3,
+	.sol-header,
+	.video-content,
+	.locations-new-sec .col-lg-5 .p-5,
+	.footer-widget,
+	.solution-card,
+	.why-txt .sec-intro {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-content3 .nav-tabs {
+		justify-content: center;
+	}
+
+	.success-stat .meta {
+		text-align: center;
+	}
+
+	.footer-bottom-section .mt-5 {
+		margin-top: 1.5rem !important;
+		padding-top: 1.5rem !important;
+	}
+
+	.footer-bottom-section .d-flex.flex-column {
+		align-items: center !important;
+		text-align: center !important;
+	}
+
+	.footer-bottom-section .social-links {
+		justify-content: center !important;
+		margin-top: 15px;
+	}
+
+	.why-txt {
+		padding: 0;
+	}
+
+	.loc-left-content {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+.loc-left-content {
+	padding-left: 12% !important;
+	padding-right: 12% !important;
+}
+
 
 
 /* Mobile adjustments for Solution Cards (Engineering / Construction) */
