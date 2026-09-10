@@ -10542,3 +10542,30 @@ ul.check li:before {
 	background: var(--primary);
 	color: #ffffff !important;
 }
+
+/* Google Reviews Enhancements */
+.review-sec3 .review-entry {
+	height: 100%;
+}
+
+.review-sec3 .rev-content {
+	min-height: 230px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-sec3 .review-entry:hover .rev-content {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.review-sec3 .author-avatar {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.review-sec3 .rev-content p {
+	font-style: normal;
+	line-height: 1.6;
+	font-size: 15px;
+}
+
