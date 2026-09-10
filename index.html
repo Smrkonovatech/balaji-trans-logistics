@@ -44,7 +44,7 @@
    <link rel="stylesheet" href="css/jquery.datepicker.css">
    <link rel="stylesheet" href="css/jquery.timepicker.min.css">
    <!-- Style CSS -->
-   <link rel="stylesheet" href="css/style.css?v=4">
+   <link rel="stylesheet" href="css/style.css?v=6">
 
    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -91,8 +91,13 @@
             </ul>
          </nav>
       </div>
-      <a href="contact.html" class="btn btn-primary mt-5"> Get a Transport Quote <i
-            class="fa fa-arrow-right"></i><span></span></a>
+      <div class="d-flex flex-column gap-2 mt-5">
+         <a href="tel:+919876543210" class="btn btn-call-canvas w-100">
+            <i class="fa-solid fa-phone me-2"></i> Call: +91 98765 43210
+         </a>
+         <a href="contact.html" class="btn btn-primary w-100"> Get a Transport Quote <i
+               class="fa fa-arrow-right"></i><span></span></a>
+      </div>
    </div>
    <!-- Canvas Menu End -->
 
@@ -107,6 +112,10 @@
                <div class="d-flex justify-content-between align-items-center">
                   <div class="header-infos">
                      <ul class="d-none d-xl-flex flex-wrap align-items-center gap-4">
+                        <li>
+                           <i class="fa-solid fa-phone text-white me-2"></i>
+                           <a href="tel:+919876543210">+91 98765 43210</a>
+                        </li>
                         <li>
                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
                               viewBox="0 0 17 17">
@@ -131,6 +140,10 @@
                         <a class="topbar-link dropdown-toggle show" href="#" data-bs-toggle="dropdown"
                            aria-expanded="true">Useful links</a>
                         <ul class="dropdown-menu">
+                           <li>
+                              <i class="fa-solid fa-phone text-primary me-2"></i>
+                              <a href="tel:+919876543210">Call: +91 98765 43210</a>
+                           </li>
                            <li>
                               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
                                  viewBox="0 0 17 17">
@@ -172,6 +185,11 @@
                   <a href="index.html" class="navbar-brand">
                      <img src="images/logo-mark.png" alt="Balaji Trans Logistics" class="img-fluid">
                   </a>
+                  <div class="d-flex align-items-center gap-2 d-xl-none order-lg-2 ms-auto me-2">
+                     <a href="tel:+919876543210" class="btn-call-mobile" aria-label="Call Balaji Trans Logistics" title="Call Now">
+                        <i class="fa-solid fa-phone"></i>
+                     </a>
+                  </div>
                   <button class="navbar-toggler offcanvas-nav-btn" type="button">
                      Menu <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" fill="none"
                         viewBox="0 0 14 12">
@@ -179,9 +197,12 @@
                            d="M0 .75Q.063.063.75 0h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 1.437 0 .75m0 5Q.063 5.063.75 5h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 6.437 0 5.75m13.25 5.75H.75q-.687-.063-.75-.75.063-.687.75-.75h12.5q.687.063.75.75-.063.687-.75.75" />
                      </svg>
                   </button>
-                  <div class="nav-cta d-none d-md-flex order-lg-3">
-                     <div class="d-flex align-items-center justify-content-between gap-4">
-
+                  <div class="nav-cta d-none d-xl-flex order-lg-3">
+                     <div class="d-flex align-items-center justify-content-between gap-3">
+                        <a href="tel:+919876543210" class="btn-call-nav" title="Call Balaji Trans Logistics">
+                           <i class="fa-solid fa-phone"></i>
+                           <span class="call-text">Call Now</span>
+                        </a>
                         <a href="contact.html" class="btn btn-primary btn-hover"> Get a Quote <i
                               class="fa fa-arrow-right"></i>
                            <span></span>
@@ -274,12 +295,20 @@
                   <p class="hero-desc text-white mb-5">Balaji Trans Logistics provides trailer, container, cargo,
                      vehicle and goods transportation for businesses across Bengaluru industrial locations.</p>
 
-                  <div class="d-flex flex-wrap align-items-center gap-4">
+                  <div class="d-flex flex-wrap align-items-center gap-3">
                      <a href="contact.html"
                         class="hero-btn btn bg-white border-0 rounded-1 shadow-sm d-inline-flex align-items-center justify-content-center">
                         <div class="hero-btn-text d-inline-block">Get Quote</div>
                      </a>
-                     <div class="d-flex align-items-center text-white ms-4">
+                     <a href="tel:+919876543210"
+                        class="hero-call-btn rounded-1 shadow-sm d-inline-flex align-items-center justify-content-center"
+                        title="Call Balaji Trans Logistics">
+                        <div class="hero-btn-text d-inline-flex align-items-center gap-2">
+                           <i class="fa-solid fa-phone"></i>
+                           <span class="call-text">Call Now</span>
+                        </div>
+                     </a>
+                     <div class="d-flex align-items-center text-white ms-sm-2 my-2 my-sm-0">
                         <span
                            class="hero-loc-count bg-white rounded-circle d-flex align-items-center justify-content-center me-3">5</span>
                         <span class="hero-loc-text text-uppercase">Locations</span>
@@ -1464,6 +1493,19 @@
       </div>
    </footer>
    <!-- Footer End -->
+
+   <!-- WhatsApp Sticky Button -->
+   <a href="https://wa.me/919741356731?text=Hello%20Balaji%20Trans%20Logistics%2C%20I%20would%20like%20to%20inquire%20about%20transportation%20services."
+      class="whatsapp-sticky"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with Balaji Trans Logistics on WhatsApp"
+      title="Chat with Balaji Trans Logistics on WhatsApp">
+      <div class="whatsapp-sticky-icon">
+         <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      <span class="whatsapp-sticky-text">Chat on WhatsApp</span>
+   </a>
 
    <!-- Scroll Top -->
    <div class="scroll-top">
