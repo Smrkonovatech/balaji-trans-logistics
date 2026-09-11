@@ -1,0 +1,768 @@
+/* ==========================================================================
+   Balaji Trans Logistics - Mobile Optimization & Responsive Design Enhancements
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL MOBILE RESETS & OVERFLOW SAFEGUARDS
+   -------------------------------------------------------------------------- */
+html,
+body {
+	overflow-x: hidden !important;
+	max-width: 100vw;
+	position: relative;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Ensure media elements never exceed viewport or card width */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Table mobile wrapper */
+.table-responsive {
+	overflow-x: auto !important;
+	-webkit-overflow-scrolling: touch;
+	margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. TOUCH ERGONOMICS & MINIMUM TAP TARGETS (Apple & Google Guidelines)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+	/* Prevent iOS Safari automatic page zoom on form focus */
+	input,
+	select,
+	textarea,
+	.form-control,
+	.nice-select,
+	.cta-input {
+		font-size: 16px !important;
+		min-height: 44px;
+	}
+
+	/* Tap targets minimum 44px height */
+	.btn,
+	.btn-primary,
+	.btn-secondary,
+	.navbar-toggler,
+	.accordion-button,
+	.nav-link {
+		min-height: 44px;
+	}
+
+	/* Reduce heavy section padding on phones for tight, clean browsing */
+	.sec-padding {
+		padding-top: 50px !important;
+		padding-bottom: 50px !important;
+	}
+
+	/* Responsive Heading Hierarchy */
+	.display-1 {
+		font-size: clamp(2rem, 7.5vw, 2.75rem) !important;
+		line-height: 1.2 !important;
+	}
+
+	.display-2 {
+		font-size: clamp(1.75rem, 6.5vw, 2.25rem) !important;
+		line-height: 1.22 !important;
+	}
+
+	.display-3 {
+		font-size: clamp(1.4rem, 5.5vw, 1.85rem) !important;
+		line-height: 1.25 !important;
+	}
+
+	.display-4 {
+		font-size: clamp(1.2rem, 4.5vw, 1.45rem) !important;
+		line-height: 1.3 !important;
+	}
+
+	.sec-title {
+		font-size: clamp(1.5rem, 5.8vw, 2.2rem) !important;
+		line-height: 1.25 !important;
+		margin-bottom: 14px !important;
+	}
+
+	.sub-title {
+		font-size: 13px !important;
+		letter-spacing: 0.5px !important;
+		margin-bottom: 8px !important;
+	}
+
+	.sec-intro {
+		margin-bottom: 30px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE HEADER & NAVIGATION ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+	/* Keep orange topbar background; remove only the Useful links dropdown */
+	.header-top {
+		display: block !important;
+		background-color: var(--primary) !important;
+		padding: 7px 0 !important;
+	}
+
+	.topbar-text,
+	.topbar-link,
+	.header-infos .topbar-text,
+	.header-top .dropdown {
+		display: none !important;
+	}
+
+	.mobile-topbar-content {
+		display: flex !important;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		font-size: 13px;
+		color: #ffffff;
+	}
+
+	.mobile-topbar-content a {
+		color: #ffffff !important;
+		text-decoration: none !important;
+		font-weight: 700;
+	}
+
+	.header-sticky.scroll-on {
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+	}
+
+	/* Header brand logo scaling */
+	.navbar-brand img {
+		max-height: 44px;
+		width: auto;
+		object-fit: contain;
+	}
+
+	/* Mobile Menu Toggler */
+	.navbar button.navbar-toggler.offcanvas-nav-btn {
+		display: inline-flex !important;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		padding: 8px 14px !important;
+		background: rgba(244, 81, 30, 0.08) !important;
+		border: 1.5px solid rgba(244, 81, 30, 0.25) !important;
+		border-radius: 8px !important;
+		color: var(--headings-color) !important;
+		font-size: 14px !important;
+		font-weight: 700 !important;
+		letter-spacing: 0.5px;
+		min-height: 42px;
+		transition: all 0.25s ease;
+	}
+
+	.navbar button.navbar-toggler.offcanvas-nav-btn:hover,
+	.navbar button.navbar-toggler.offcanvas-nav-btn:active {
+		background: rgba(244, 81, 30, 0.16) !important;
+		border-color: var(--primary) !important;
+		color: var(--primary) !important;
+	}
+
+	.navbar button.navbar-toggler.offcanvas-nav-btn svg {
+		width: 15px;
+		height: 13px;
+	}
+
+	/* Mobile Call Button in Header */
+	.btn-call-mobile {
+		width: 42px !important;
+		height: 42px !important;
+		font-size: 16px !important;
+		background: linear-gradient(135deg, #F4511E 0%, #d83d0d 100%) !important;
+		box-shadow: 0 3px 10px rgba(244, 81, 30, 0.35) !important;
+		border-radius: 50% !important;
+	}
+}
+
+/* Offcanvas Mobile Drawer Styling */
+@media (max-width: 1199.98px) {
+	.offcanvas-nav {
+		width: 86vw !important;
+		max-width: 340px !important;
+		background: #ffffff !important;
+		box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15) !important;
+	}
+
+	.offcanvas-header {
+		padding: 16px 20px !important;
+		border-bottom: 1px solid #edf0f2;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.offcanvas-header img {
+		max-height: 42px;
+		width: auto;
+	}
+
+	.offcanvas-header .btn-close {
+		width: 36px;
+		height: 36px;
+		opacity: 0.85;
+		background-color: #f1f4f7 !important;
+		border-radius: 50%;
+		background-size: 10px;
+		padding: 0 !important;
+		transition: all 0.2s ease;
+	}
+
+	.offcanvas-header .btn-close:hover {
+		opacity: 1;
+		background-color: #e5e9ed !important;
+	}
+
+	.offcanvas-body {
+		padding: 16px 20px 30px !important;
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: space-between !important;
+	}
+
+	.offcanvas-body .navbar-nav {
+		width: 100%;
+		margin: 0 !important;
+	}
+
+	.offcanvas-body .navbar-nav .nav-item {
+		width: 100%;
+		border-bottom: 1px solid #f2f4f6;
+	}
+
+	.offcanvas-body .navbar-nav .nav-link {
+		font-size: 16px !important;
+		font-weight: 600 !important;
+		color: #172033 !important;
+		padding: 13px 4px !important;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: color 0.2s ease, padding-left 0.2s ease;
+	}
+
+	.offcanvas-body .navbar-nav .nav-link:hover,
+	.offcanvas-body .navbar-nav .nav-link.active {
+		color: var(--primary) !important;
+		padding-left: 6px !important;
+	}
+
+	/* Offcanvas Dropdown Styling */
+	.offcanvas-body .dropdown-menu {
+		position: static !important;
+		float: none !important;
+		transform: none !important;
+		width: 100% !important;
+		background: #f8fafc !important;
+		border: 1px solid #e9edf1 !important;
+		border-radius: 8px !important;
+		padding: 8px 12px !important;
+		margin: 4px 0 10px !important;
+		box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+	}
+
+	.offcanvas-body .dropdown-item {
+		font-size: 14.5px !important;
+		font-weight: 500 !important;
+		color: #4b5563 !important;
+		padding: 9px 12px !important;
+		border-radius: 6px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.offcanvas-body .dropdown-item::before {
+		content: "•";
+		color: var(--primary);
+		font-weight: bold;
+	}
+
+	.offcanvas-body .dropdown-item:hover,
+	.offcanvas-body .dropdown-item:active {
+		background-color: rgba(244, 81, 30, 0.08) !important;
+		color: var(--primary) !important;
+	}
+
+	/* Offcanvas Mobile Quick Action Box */
+	.offcanvas-quick-actions {
+		margin-top: 24px;
+		padding-top: 20px;
+		border-top: 1px solid #edf0f2;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.offcanvas-call-btn {
+		background: #ffffff;
+		border: 1.5px solid var(--primary);
+		color: var(--primary) !important;
+		font-weight: 700;
+		font-size: 14.5px;
+		padding: 11px 16px;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		text-decoration: none !important;
+		transition: all 0.25s ease;
+	}
+
+	.offcanvas-call-btn:hover,
+	.offcanvas-call-btn:active {
+		background: var(--primary);
+		color: #ffffff !important;
+	}
+
+	.offcanvas-quote-btn {
+		background: var(--primary);
+		border: 1.5px solid var(--primary);
+		color: #ffffff !important;
+		font-weight: 700;
+		font-size: 14.5px;
+		padding: 11px 16px;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		text-decoration: none !important;
+		box-shadow: 0 4px 12px rgba(244, 81, 30, 0.3);
+	}
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO BANNER MOBILE OPTIMIZATION
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+	.hero-banner {
+		min-height: auto !important;
+		padding: 40px 0 50px !important;
+		position: relative;
+	}
+
+	.hero-banner-img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover !important;
+		object-position: center !important;
+		opacity: 0.38 !important;
+	}
+
+	/* High-readability dark backdrop on mobile */
+	.hero-banner::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(7, 20, 38, 0.78) 0%, rgba(7, 20, 38, 0.9) 100%);
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		padding: 0 !important;
+		margin: 0 !important;
+		text-align: center !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hero-badge {
+		padding: 5px 14px !important;
+		margin-bottom: 16px !important;
+		transform: none !important;
+		border-radius: 30px;
+		background: rgba(244, 81, 30, 0.25);
+		border: 1px solid rgba(244, 81, 30, 0.5);
+	}
+
+	.hero-badge-text {
+		font-size: 11px !important;
+		letter-spacing: 0.6px !important;
+		font-weight: 700;
+	}
+
+	.hero-title {
+		font-size: clamp(1.85rem, 7.8vw, 2.65rem) !important;
+		line-height: 1.22 !important;
+		margin-bottom: 14px !important;
+		text-align: center !important;
+	}
+
+	.hero-desc {
+		font-size: 14.5px !important;
+		line-height: 1.6 !important;
+		margin-bottom: 24px !important;
+		max-width: 100% !important;
+		opacity: 0.95;
+		text-align: center !important;
+	}
+
+	/* Hero Action Buttons in 2-button row on mobile */
+	.hero-content .d-flex.flex-wrap {
+		flex-direction: row !important;
+		justify-content: center !important;
+		align-items: center !important;
+		gap: 10px !important;
+		width: 100%;
+	}
+
+	.hero-btn,
+	.hero-call-btn {
+		flex: 1 1 calc(50% - 8px) !important;
+		max-width: 175px !important;
+		min-width: 135px !important;
+		min-height: 48px !important;
+		padding: 11px 16px !important;
+		font-size: 14px !important;
+		display: inline-flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		transform: none !important;
+		border-radius: 8px !important;
+		box-sizing: border-box;
+	}
+
+	.hero-btn {
+		background-color: var(--primary) !important;
+		color: #ffffff !important;
+		border: 1.5px solid var(--primary) !important;
+		box-shadow: 0 4px 14px rgba(244, 81, 30, 0.4) !important;
+	}
+
+	.hero-btn .hero-btn-text {
+		color: #ffffff !important;
+		font-weight: 700;
+	}
+
+	.hero-call-btn {
+		background-color: rgba(255, 255, 255, 0.12) !important;
+		border: 1.5px solid #ffffff !important;
+		color: #ffffff !important;
+		backdrop-filter: blur(8px);
+	}
+
+	/* Location Hub Badge under buttons */
+	.hero-content .ms-sm-2 {
+		width: 100%;
+		justify-content: center !important;
+		margin-top: 14px !important;
+		margin-left: 0 !important;
+	}
+
+	.hero-loc-count {
+		width: 36px !important;
+		height: 36px !important;
+		font-size: 14px !important;
+	}
+
+	.hero-loc-text {
+		font-size: 12px !important;
+	}
+}
+
+@media (max-width: 360px) {
+	.hero-btn,
+	.hero-call-btn {
+		flex: 1 1 100% !important;
+		max-width: 260px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   5. LOCATIONS SECTION MOBILE REFINEMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+	.locations-new-sec {
+		margin: 35px 0 !important;
+	}
+
+	.locations-sec-title {
+		font-size: clamp(1.6rem, 6.5vw, 2.3rem) !important;
+		line-height: 1.2 !important;
+	}
+
+	.loc-left-content {
+		padding: 30px 20px !important;
+		text-align: center;
+		align-items: center;
+	}
+
+	.loc-left-content p {
+		font-size: 14px !important;
+		line-height: 1.6 !important;
+	}
+
+	.loc-card-container {
+		height: 74px !important;
+		margin-bottom: 3px;
+	}
+
+	.loc-card-primary {
+		width: 60px !important;
+		clip-path: none !important;
+	}
+
+	.loc-card-num {
+		font-size: 1.45rem !important;
+	}
+
+	.loc-title {
+		font-size: 1.1rem !important;
+		letter-spacing: 0.5px !important;
+	}
+
+	.loc-title-wrap {
+		left: 14px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   6. SERVICES & CASE STUDIES ON MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+	.service-entry {
+		min-height: 280px;
+	}
+
+	.service-entry .serv-txt {
+		padding: 20px 18px !important;
+	}
+
+	.service-card2 {
+		padding: 22px 18px !important;
+		border-radius: 12px !important;
+	}
+
+	.services-3-carousel .swiper-pagination,
+	.review-carousel3 .swiper-pagination {
+		bottom: 0 !important;
+	}
+
+	.swiper-pagination-bullet {
+		width: 10px !important;
+		height: 10px !important;
+		margin: 0 5px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   7. PROCESS, STATS & ACCORDION
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+	/* Stats entries */
+	.stat-sec3 .stat-entries {
+		padding: 30px 20px !important;
+		border-radius: 12px !important;
+	}
+
+	.stat-sec3 .stat-entries .s-item h3 {
+		font-size: 22px !important;
+	}
+
+	/* Process Cards */
+	.process-sec3 .process-item {
+		margin-bottom: 24px;
+	}
+
+	/* FAQ Accordion touch areas */
+	.faq-accordion .accordion-item {
+		margin-bottom: 12px !important;
+		border-radius: 10px !important;
+	}
+
+	.faq-accordion .accordion-item .accordion-button {
+		font-size: 15.5px !important;
+		line-height: 1.4 !important;
+		padding: 16px 45px 16px 18px !important;
+		font-weight: 600 !important;
+	}
+
+	.faq-accordion .accordion-item .accordion-body {
+		font-size: 14.5px !important;
+		line-height: 1.6 !important;
+		padding: 0 18px 18px !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   8. FOOTER & CTA FORM MOBILE REFINEMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+	.footer-top-section {
+		padding: 40px 15px !important;
+	}
+
+	.cta-title {
+		font-size: clamp(1.75rem, 7.5vw, 2.4rem) !important;
+		line-height: 1.2 !important;
+		margin-bottom: 24px !important;
+	}
+
+	.footer-bottom-section {
+		padding: 40px 15px 30px !important;
+	}
+
+	/* Hide oversized watermark logo on mobile to keep text clean & readable */
+	.footer-bottom-section > img[alt="BTL Logo"] {
+		display: none !important;
+	}
+
+	.footer-widget h3 {
+		font-size: 20px !important;
+		margin-bottom: 14px !important;
+	}
+
+	.footer-widget ul li a {
+		font-size: 14.5px !important;
+		padding: 6px 0;
+		display: inline-block;
+	}
+
+	.social-links a {
+		width: 42px;
+		height: 42px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.12);
+	}
+}
+
+/* --------------------------------------------------------------------------
+   9. HIGH-CONVERTING MOBILE BOTTOM QUICK-ACTION BAR
+   -------------------------------------------------------------------------- */
+.mobile-bottom-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background: #ffffff;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.09);
+	z-index: 9998;
+	display: none;
+	padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 767.98px) {
+	.mobile-bottom-bar {
+		display: flex !important;
+		align-items: stretch;
+		justify-content: space-around;
+	}
+
+	/* Ensure page content is never obscured by the sticky bottom bar */
+	body {
+		padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
+	}
+
+	/* Position scroll-to-top cleanly above bottom bar */
+	.scroll-top {
+		bottom: calc(74px + env(safe-area-inset-bottom, 0px)) !important;
+		right: 16px !important;
+		width: 44px !important;
+		height: 44px !important;
+		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+	}
+
+	.scroll-top:after {
+		line-height: 44px !important;
+		font-size: 1.1rem !important;
+	}
+
+	/* On phones, hide redundant standalone floating WhatsApp badge since it is directly in bottom bar */
+	.whatsapp-sticky {
+		display: none !important;
+	}
+}
+
+.mobile-bottom-btn {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	text-decoration: none !important;
+	font-family: var(--headings-font, 'Rethink Sans', sans-serif);
+	transition: background-color 0.2s ease, transform 0.15s ease;
+	position: relative;
+	border: none;
+	background: transparent;
+	padding: 4px 2px;
+}
+
+.mobile-bottom-btn:active {
+	background-color: #f5f7f9;
+	transform: scale(0.96);
+}
+
+.mobile-bottom-btn i {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.mobile-bottom-btn span {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+/* Call Action - Vibrant Primary */
+.mobile-bottom-btn.call-action {
+	color: #F4511E;
+}
+.mobile-bottom-btn.call-action i {
+	color: #F4511E;
+}
+
+/* WhatsApp Action - Official Green with subtle pulse dot */
+.mobile-bottom-btn.wa-action {
+	color: #128C7E;
+	border-left: 1px solid #f0f2f5;
+	border-right: 1px solid #f0f2f5;
+}
+.mobile-bottom-btn.wa-action i {
+	color: #25D366;
+	font-size: 20px;
+}
+
+/* Quote Action - Sleek Dark Navy */
+.mobile-bottom-btn.quote-action {
+	color: #071426;
+}
+.mobile-bottom-btn.quote-action i {
+	color: #071426;
+}
